@@ -1,0 +1,21 @@
+/**:
+    ros__parameters:
+        image_transport: raw    # image format
+        family: 36h11           # tag family name
+        size: 0.06              # default tag edge size in meter (6cm)
+        max_hamming: 0          # maximum allowed hamming distance (corrected bits)
+
+        detector:
+            threads: 4          # number of threads
+            decimate: 1.0       # decimate resolution for quad detection (1.0 = full resolution)
+            blur: 0.8           # sigma of Gaussian blur for quad detection
+            refine: True        # snap to strong gradients
+            sharpening: 0.25    # sharpening of decoded images
+            debug: False
+
+        pose_estimation_method: "pnp"
+
+        tag:
+            ids:    [0, 1, 2, 3, 4, 5]
+            frames: [tag_0, tag_1, tag_2, tag_3, tag_4, tag_5]
+            sizes:  [0.06, 0.06, 0.06, 0.06, 0.06, 0.06]

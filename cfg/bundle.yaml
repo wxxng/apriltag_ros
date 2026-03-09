@@ -1,0 +1,22 @@
+# AprilTag Bundle Definitions
+# Each bundle groups multiple tags as a rigid body for more robust pose estimation.
+# In this setup, tag 0 defines the bundle origin and the object center is
+# 0.04 m along the -Z axis of tag 0 (configured in bundle_pose_node.py).
+#
+# - name: bundle identifier (used as TF frame name)
+# - layout: list of member tags
+#   - id: tag ID
+#   - size: tag size in meters (side length of black border)
+#   - x, y, z: position relative to bundle origin (meters)
+#   - qw, qx, qy, qz: orientation relative to bundle origin (quaternion)
+
+tag_bundles:
+  - name: "my_bundle"
+    layout:
+      # tag 0 is the reference frame used during calibration
+      - {id: 0, size: 0.060, x: 0.0000, y: 0.0000, z: 0.0000, qw: 1.0000, qx: 0.0000, qy: 0.0000, qz: 0.0000}
+      - {id: 1, size: 0.060, x: 0.0000, y: 0.0400, z: -0.0400, qw: 0.0000, qx: 0.0000, qy: 0.7071, qz: 0.7071}
+      - {id: 2, size: 0.060, x: -0.0400, y: 0.0000, z: -0.0400, qw: 0.5000, qx: 0.5000, qy: -0.5000, qz: -0.5000}
+      - {id: 3, size: 0.060, x: 0.0000, y: 0.0000, z: -0.0800, qw: 0.0000, qx: 0.7071, qy: 0.7071, qz: 0.0000}
+      - {id: 4, size: 0.060, x: 0.0400, y: 0.0000, z: -0.0400, qw: 0.5000, qx: 0.5000, qy: 0.5000, qz: 0.5000}
+      - {id: 5, size: 0.060, x: 0.0000, y: -0.0400, z: -0.0400, qw: 0.5000, qx: 0.5000, qy: 0.5000, qz: -0.5000}
