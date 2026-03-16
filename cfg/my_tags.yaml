@@ -1,6 +1,6 @@
 /**:
     ros__parameters:
-        image_transport: raw    # image format
+        image_transport: compressed    # image format
         family: 36h11           # tag family name
         size: 0.06              # default tag edge size in meter (6cm)
         max_hamming: 0          # maximum allowed hamming distance (corrected bits)
